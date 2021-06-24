@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="meme-generator.css" />
+  </head>
+  <body>
+    <h1 class="display-1 text-light bg-primary px-5 py-3">
+      Simple Meme Generator
+    </h1>
+    <div class="container py-3">
+      <p>
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Top Text</label
+        >
+        <textarea class="form-control" id="top-text" rows="2"></textarea>
+        <br />
+
+        <label for="customRange1" class="form-label">Top Text Size</label>
+        <input
+          type="range"
+          id="top-text-size-input"
+          min="0.05"
+          max="0.25"
+          value="0.15"
+          step="0.01"
+          class="form-range"
+          id="customRange1"
+        />
+      </p>
+      <p>
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Bottom Text</label
+        >
+        <textarea class="form-control" id="bottom-text" rows="2"></textarea>
+        <br />
+        <label for="customRange1" class="form-label">Bottom Text Size</label>
+        <input
+          type="range"
+          id="bottom-text-size-input"
+          min="0.05"
+          max="0.25"
+          value="0.15"
+          step="0.01"
+          class="form-range"
+          id="customRange1"
+        />
+      </p>
+      <p>
+        <input type="file" id="image-input" accept="image/*" />
+      </p>
+      <p>
+        <button class="btn btn-success" id="generate-btn">Generate!</button>
+      </p>
+      <p>
+        <canvas
+          id="meme-canvas"
+          title='Right click -> "Save image as..."'
+        ></canvas>
+      </p>
+    </div>
+    <script src="meme-generator.js"></script>
+  </body>
+</html>
